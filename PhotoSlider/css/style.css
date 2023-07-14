@@ -1,0 +1,116 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to top right, hotpink, orange);
+}
+
+#slider {
+    position: relative;
+    overflow:hidden;
+    display: flex;
+    width: 600px;
+    height: 400px;
+    justify-content: space-between;
+    border-radius: 30px;
+    box-shadow: 0 5px 30px black;
+}
+
+.arrow {
+    text-align: center;
+    width: 45px;
+    height: 65px;
+    background-color: transparent;
+    opacity: .8;
+    align-self: center;
+    transition-duration: .5s;
+    border-radius: 0 15px 15px 0;
+    color: black;
+    font-size: 45px;
+    font-weight: bold;
+    position: absolute;
+}
+
+.arrow:hover {
+    transition-duration: .5s;
+    opacity: .6;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.arrow:active {
+    opacity: 1;
+}
+
+.right {
+    justify-self: right;
+    border-radius: 20px 0 0 20px;
+    right: 0;
+}
+
+.round {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: black;
+    opacity: .5;
+    margin: 10px 4px;
+    transition-duration: .3s;
+    box-shadow: 0 3px 5px black;
+}
+
+.round:hover {
+    cursor: pointer;
+}
+
+.active {
+    opacity: .8;
+    width: 40px;
+    border-radius: 20px;
+}
+
+.hidden {
+    position:absolute;
+    opacity: 0;
+}
+
+.img {
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.loader {
+    display: flex;
+    opacity: .7;
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 65px;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    font-family: Arial;
+    animation-name: widen;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.l {
+    padding-left: 15px;
+    padding-top: 150px;
+}
+
+@keyframes widen {
+    0% {
+        letter-spacing: normal;
+    }
+
+    100% {
+        letter-spacing: 25px;
+    }
+}
